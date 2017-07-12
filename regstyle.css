@@ -1,0 +1,47 @@
+body{
+	
+
+    background-color: #525252;
+}
+.centered-form{
+	margin-top: 60px;
+	padding:1px;
+}
+
+.centered-form .panel{
+	background: rgba(0, 0, 0, 0.8);
+	box-shadow: rgba(0, 0, 0, 0.3) 20px 20px 20px;
+	
+}
+.panel-title{
+	background: rgba(0, 128, 0, 1.0);
+	font-family:  "Times New Roman",Times,serif;
+	padding:1px 0px 2px 0px;
+}
+
+*{
+	margin: 0;
+}
+#image{
+	background-image:url('login.jpg');
+	height: 100%;
+	width: 100%;
+	background-size: cover;
+	
+}
+input::placeholder{
+	color:black;
+	font-weight:bold;
+	text-align: center;
+}
+
+.header{
+	background: rgba(0, 0, 0, 0.3);
+	font-family:  "Times New Roman",Times,serif;
+	font-weight:bold;
+	
+	color: white;
+	
+	
+}
+
