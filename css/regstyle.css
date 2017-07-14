@@ -3,7 +3,12 @@ body{
     background-color: #525252;
 	
 }
-
+a:hover{
+		text-decoration-line:none;
+	}
+	a:visited{
+		color:white;
+		}
 #image{
 	
 	background-size: cover;

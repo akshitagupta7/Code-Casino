@@ -1,19 +1,21 @@
-h1{text-align:center;
-	background-color:white;
-	padding-top:20px;
-	padding-bottom:20px;
-	border color-black;
+
+h1{
+	text-align:center;
+	background-color:#A1A5A6;
+	text-shadow: 3px 2px #C2C9CC;
+	border-color:black;
 	border-width:8px;
 	border-style:double;
 	color:black;
-	font-family:arial;
+	font-family: 'Abril Fatface', cursive;
 	}
+	
 	body{
-	background-image:url(front.jpg);
 	color:white;
-	background-repeat:no-repeat fixed;
+	background-repeat:no-repeat;
 	background-size:cover;	
 	}
+	
 	a:visited{
 color:white;}
 a:hover{
@@ -27,14 +29,15 @@ a:hover{
 	font-weight:bold;
 	line-height:300%;}
 	
+	.col-sm-6 .col-md-6{
+		width:49%;
+	}
+	.col-sm-12 col-md-12{
+	width:100%;	
+	}
+	button .btn{
 	
-	button{background-color:black;
-	color:white;
-	padding:25px;
-	border-width:3px;
-	border-style:dashed;
 	font-weight:bold;
-	position:absolute;
-	top:80%;
-	left:45%;
+	position:relative;
+
 	}
