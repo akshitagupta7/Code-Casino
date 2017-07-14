@@ -40,8 +40,12 @@
 	top:380px;
 
 	}
-	
-	a:visited{color:white;}
+	a:hover{
+		text-decoration-line:none;
+	}
+	a:visited{
+		color:white;
+		}
 	
 	.submit{
 	background-color:black;

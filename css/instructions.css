@@ -1,0 +1,40 @@
+h1{text-align:center;
+	background-color:white;
+	padding-top:20px;
+	padding-bottom:20px;
+	border color-black;
+	border-width:8px;
+	border-style:double;
+	color:black;
+	font-family:arial;
+	}
+	body{
+	background-image:url(front.jpg);
+	color:white;
+	background-repeat:no-repeat fixed;
+	background-size:cover;	
+	}
+	a:visited{
+color:white;}
+a:hover{
+		text-decoration-line:none;
+	}
+	a{
+		text-decoration-line:none;
+	}
+	ul{
+	
+	font-weight:bold;
+	line-height:300%;}
+	
+	
+	button{background-color:black;
+	color:white;
+	padding:25px;
+	border-width:3px;
+	border-style:dashed;
+	font-weight:bold;
+	position:absolute;
+	top:80%;
+	left:45%;
+	}
