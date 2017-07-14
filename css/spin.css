@@ -1,0 +1,80 @@
+
+	body{
+    background-image:url("https://media.giphy.com/media/xMu2442GXSmyI/giphy.gif");
+	position: fixed;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: 35% 8%;
+    background-repeat: no-repeat;
+	}
+	
+#chart{
+	padding:10px;
+	position:relative;
+}
+    #question{
+		position:fixed;
+        left:520px;
+		top:250px;
+	    color:#E1ECF0;
+		font-size: 25px;
+        font-weight: bold;
+        font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+       
+	
+    }
+	
+	.input-group{
+		right:450px;
+		top:105px;
+		
+	}
+	
+	
+ 	.button{
+	background-color:black;
+	color:white;
+	font-weight:bold;
+	position:relative;
+	top:380px;
+
+	}
+	
+	a:visited{color:white;}
+	
+	.submit{
+	background-color:black;
+	color:white;
+	font-weight:bold;
+	position:relative;
+	top:380px;
+	
+	}
+	 #ans{
+	
+    width: 250px;
+    background: none repeat scroll 0% 0% #FFFF00;
+    border: 1px solid #91B57C;
+    
+    color: black;
+    border-radius: 8px;
+    box-shadow: 1px 2px 3px;
+
+	
+        font-family:Helvetica, Arial, sans-serif;
+        font-size:11px;
+        pointer-events:none;
+    
+	}
+	
+	
+	#countdown{
+	font-size:30px;
+	color:white;
+	text-decoration:underline;
+	text-shadow:4px 4px 4px blue;
+	width:260px; height:45px;
+	position:fixed;
+	left:70%;
+	}

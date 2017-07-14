@@ -1,7 +1,13 @@
 body{
 	
-
     background-color: #525252;
+	
+}
+
+#image{
+	
+	background-size: cover;
+	 background-repeat: no-repeat;
 }
 .centered-form{
 	margin-top: 60px;
@@ -19,16 +25,7 @@ body{
 	padding:1px 0px 2px 0px;
 }
 
-*{
-	margin: 0;
-}
-#image{
-	background-image:url('login.jpg');
-	height: 100%;
-	width: 100%;
-	background-size: cover;
-	
-}
+
 input::placeholder{
 	color:black;
 	font-weight:bold;
@@ -39,7 +36,6 @@ input::placeholder{
 	background: rgba(0, 0, 0, 0.3);
 	font-family:  "Times New Roman",Times,serif;
 	font-weight:bold;
-	
 	color: white;
 	
 	
