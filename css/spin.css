@@ -13,16 +13,25 @@
 	padding:10px;
 	position:relative;
 }
+@keyframes blink { 
+   50% { border-color: black; } 
+}
+
+    
+
     #question{
+		background:white;
 		position:fixed;
         left:520px;
 		top:250px;
-	    color:#E1ECF0;
+	    color:#black;
 		font-size: 25px;
-        font-weight: bold;
+        font-weight:900;
         font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-       
-	
+		width: 60%;
+		border: 10px solid #ccc;
+		border-radius: 4px;
+       animation: blink 10s step-end infinite alternate;
     }
 	
 	.input-group{
