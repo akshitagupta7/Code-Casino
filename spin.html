@@ -18,27 +18,37 @@
 		
 	</head>
 	
-	<body>
-	<div class="row">
-	 <div class="col-sm-8 col-md-8">
-	 <div id="chart"></div>
-		</div>
-		<div class="col-sm-4 col-md-4">
+<body>
+	<div class="container-fluid">
+ <div class="row">
+
+	<div class="col-sm-8 col-md-8">
+	    <div id="chart"></div>
+	</div>
+	
+	<div class="col-sm-4 col-md-4">
 		<div id="question"><h1></h1></div>
-		<button type="button" class="btn btn-outline-success submit btn-lg">Submit</button><br><br>
-		<button type="button" class="btn btn-outline-danger button btn-lg ">A Hint Maybe?</button><br><br>
-		<button type="button" class="btn btn-outline-secondary button btn-lg"><a href="end.html">Quit</a></button><br><br>
-		<button type="button" class="btn btn-outline-warning button btn-lg"><a href="instructions.html">Read Instructions</a></button>
-			 
-
+		<div class="input-group input-group-lg">
+           <span class="input-group-addon" id="sizing-addon1"><i class="fa fa-lightbulb-o" aria-hidden="true"></i></span>
+           <input type="text" class="form-control" size="105" placeholder="Enter Answer" required="required" autocomplete="off" aria-describedby="sizing-addon1">
+        </div>
+	</div>
+ </div>
+ <div class="row">
+    <div class="col-sm-12 col-md-12">
+		<ul>
+			<li><a href="#submit">SUBMIT</a></li>
+			<li><a href="#hint">A HINT MAYBE</li>
+			<li><a href="end.html">QUIT</a></li>
+			<li><a href="instructions.html">READ INSTRUCTIONS</a></li>
+		</ul>
+	</div>		 
  
-
-<div class="input-group input-group-lg">
-  <span class="input-group-addon" id="sizing-addon1"><i class="fa fa-lightbulb-o" aria-hidden="true"></i></span>
-  <input type="text" class="form-control" placeholder="Enter Answer" required="required" autocomplete="off" aria-describedby="sizing-addon1">
+ </div>
 </div>
 	
 <script src="https://d3js.org/d3.v3.min.js" charset="utf-8"></script>
 <script src="js/spin.js"></script>
 
 </body>
+</html>
