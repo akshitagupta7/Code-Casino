@@ -23,24 +23,26 @@
     
 
     #question{
-		display:block;
+		display:table;
 		background:white;
 		position:fixed;
-        left:505px;
-		top:50px;
+		left:550px;
+		top:220px;
+		overflow:auto;
 	    color:#black;
 		font-size: 25px;
         font-weight:900;
         font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-		width: 60%;
+		width: 800px;
 		border: 10px solid #ccc;
 		border-radius: 4px;
        animation: blink 10s step-end infinite alternate;
     }
 	
 	.input-group{
+		position:relative;
 		right:140px;
-		top:190px;
+		top:250px;
 		
 	}
 	
@@ -109,3 +111,39 @@
 	position:fixed;
 	left:70%;
 	}
+	
+	
+	.font{
+font-family: 'Joti One', cursive;
+font-size:80px;
+text-shadow: 2px 2px #A5ABAD;
+opacity: 0.9;
+
+}
+#clockdiv{
+	font-family: sans-serif;
+	color: #fff;
+	display: inline-block;
+	font-weight: 80;
+	text-align: center;
+	font-size: 30px;
+}
+
+#clockdiv > div{
+	padding: 10px;
+	border-radius: 3px;
+	background: #7FAAB5;
+	display: inline-block;
+}
+
+#clockdiv div > span{
+	padding: 15px;
+	border-radius: 3px;
+	background: #0D2D36;
+	display: inline-block;
+}
+
+.smalltext{
+	padding-top: 5px;
+	font-size: 16px;
+}
