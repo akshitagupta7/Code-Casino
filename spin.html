@@ -16,6 +16,12 @@
     <!-- Custom styles for this template -->
 	<link href="css/spin.css" rel="stylesheet">
 		
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 	</head>
 	
 <body>
@@ -58,13 +64,32 @@
     <div class="col-sm-12 col-md-12">
 		<ul>
 			<li><a href="#submit">SUBMIT</a></li>
-			<li><a href="#hint">A HINT MAYBE</li>
+			<li><a href="#hint"><class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">A HINT MAYBE</li>
 			<li><a href="end.html">QUIT</a></li>
 			<li><a href="instructions.html">READ INSTRUCTIONS</a></li>
 		</ul>
 	</div>		 
  
  </div>
+</div>
+
+
+<!-- Modal -->
+<div id="myModal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">HINT</h4>
+      </div>
+      <div class="modal-body">
+        <p>Some text in the modal.</p>
+      </div>
+    </div>
+
+  </div>
 </div>
 	
 <script src="https://d3js.org/d3.v3.min.js" charset="utf-8"></script>
