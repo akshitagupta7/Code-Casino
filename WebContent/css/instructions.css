@@ -1,0 +1,44 @@
+
+h1{
+	text-align:center;
+	background-color:#A1A5A6;
+	text-shadow: 3px 2px #C2C9CC;
+	border-color:black;
+	border-width:8px;
+	border-style:double;
+	color:black;
+	font-family: 'Abril Fatface', cursive;
+	}
+	
+	body{
+	color:white;
+	background-repeat:no-repeat;
+	background-size:cover;	
+	opacity:0.85;
+	}
+	
+	a:visited{
+color:white;}
+a:hover{
+		text-decoration-line:none;
+	}
+	a{
+		text-decoration-line:none;
+	}
+	ul{
+	
+	font-weight:bold;
+	line-height:300%;}
+	
+	.col-sm-6 .col-md-6{
+		width:49%;
+	}
+	.col-sm-12 col-md-12{
+	width:100%;	
+	}
+	button .btn{
+	
+	font-weight:bold;
+	position:relative;
+
+	}
