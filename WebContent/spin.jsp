@@ -55,7 +55,7 @@
     <div class="col-sm-12 col-md-12">
 		<ul>
 			<li><button type="submit" name="submit">SUBMIT</button></li>
-			<li><a href="#hint"><class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">A HINT MAYBE</li>
+			<li><a href="#hint"><id="myBtn" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">A HINT MAYBE</li>
 			<li><a href="end.jsp">QUIT</a></li>
 			<li><a href="instructions.jsp">READ INSTRUCTIONS</a></li>
 		</ul>
@@ -76,7 +76,6 @@
         <h4 class="modal-title">HINT</h4>
       </div>
       <div class="modal-body">
-        <p>Some text in the modal.</p>
       </div>
     </div>
 

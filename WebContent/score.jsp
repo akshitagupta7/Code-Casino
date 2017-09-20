@@ -650,6 +650,20 @@ try
 	int i=ps.executeUpdate();
 		}
 	}
+	else if(answer.equals("46"))
+	{
+		if(ans.equals("try"))
+		{
+	PreparedStatement ps=conn.prepareStatement("update ANSWERS set SCORE=?,A46=? where TEAM_NAME=?");
+	ss+=10;
+ 	session.setAttribute("SCORE",ss);
+ 	session.setAttribute("A46",ans);
+	ps.setInt(1,ss);
+	ps.setString(2,ans);
+	ps.setString(3,name);
+	int i=ps.executeUpdate();
+		}
+	}
 	else
 		out.print(ans);
 }
