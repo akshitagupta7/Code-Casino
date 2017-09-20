@@ -47,11 +47,10 @@
 		<div class="input-group input-group-lg">
            <span class="input-group-addon" id="sizing-addon1"><i class="fa fa-lightbulb-o" aria-hidden="true"></i></span>
            <input type="text" name="ans1" id="ans1" class="form-control" size="105" placeholder="Enter Answer"  autocomplete="off" required required>
+        	<input type="hidden" id="pick", name="pick" value="">
         </div>
 	</div>
  </div>
- 
- 
  <div class="row">
     <div class="col-sm-12 col-md-12">
 		<ul>
@@ -83,7 +82,6 @@
 
   </div>
 </div>
-	
 <script src="https://d3js.org/d3.v3.min.js" charset="utf-8"></script>
 <script src="js/spin.js"></script>
  <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
@@ -92,6 +90,6 @@
 	<script src="../../dist/js/bootstrap.min.js"></script>
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <script src="../../assets/js/ie10-viewport-bug-workaround.js">
-
-</body>
+  
+    </body>
 </html>

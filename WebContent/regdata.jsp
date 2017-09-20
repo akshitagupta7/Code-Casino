@@ -29,6 +29,8 @@ try
   Statement stat = con.createStatement();
   stat.executeUpdate("insert into REGISTER(TEAM_NAME,EMAIL_ID,CONTACT_NO,MEM1_FIRSTNAME,MEM2_FIRSTNAME,COLLEGE,PASSWORD,PASSWORD_CON) values('"+teamname+"','"+email+"','"+phone+"','"+mem1+"','"+mem2+"','"+cllg+"','"+pass+"','"+passc+"')");
   rs=stat.executeQuery("select * from REGISTER");
+  stat.executeUpdate("insert into ANSWERS(TEAM_NAME) values('"+teamname+"')");
+  rs=stat.executeQuery("select * from ANSWERS");
  %><iframe src="login.jsp" scrolling="auto"></iframe>
 
 <% }catch(ClassNotFoundException e)

@@ -10,7 +10,6 @@
 </head>
 <body>
 <%
-
 	String n=(String)request.getParameter("teamname");
 	String p=(String)request.getParameter("password");
 	Class.forName("oracle.jdbc.driver.OracleDriver");
