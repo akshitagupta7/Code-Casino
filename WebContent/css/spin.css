@@ -53,37 +53,36 @@
 		padding: 5px;
 		list-style: none;
 	}
-		
-	ul li{
+	input[type=button]{
 		float: left;
 		width: 290px;
 		height: 60px;
 		background-color: #660066;
 		opacity: .6;
 		line-height: 60px;
+		color:white;
 		text-align: center;
 		font-size: 25px;
-		margin: 3px;
-		border: 4px solid black;
+		padding: 3px;
+		
 	}
 	
-	ul li a,ul li a:visited{
-		
-		text-decoration-line:none;
-		color: white;
-		display: block;
-		
+	.btn{
+		float: left;
+		width: 290px;
+		height: 60px;
+		background-color: #660066;
+		opacity: .6;
+		line-height: 60px;
+		color:white;
+		text-align: center;
+		font-size: 25px;
+		padding: 3px;
+		margin: 0px 10px 505px 10px;
+		padding: 5px;
+		list-style: none;
 	}
-		
-	ul li a:hover{
-		background-color:#ff66ff;
-		border: 4px solid black;
-		color:black;
-		
-		text-decoration-line:none;
-		
-		
-	}
+	
 	 #ans{
 	
     width: 250px;
@@ -120,6 +119,17 @@ text-shadow: 2px 2px #A5ABAD;
 opacity: 0.9;
 
 }
+ #clockdiv{
+position:relative;
+left:300px;
+	top:10px;
+}
+
+#timer{
+  font-size:30px;
+  text-align:left;
+}
+
 #clockdiv{
 	font-family: sans-serif;
 	color: #fff;

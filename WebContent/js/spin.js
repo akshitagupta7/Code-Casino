@@ -12,55 +12,54 @@
         //http://osric.com/bingo-card-generator/?title=HTML+and+CSS+BINGO!&words=padding%2Cfont-family%2Ccolor%2Cfont-weight%2Cfont-size%2Cbackground-color%2Cnesting%2Cbottom%2Csans-serif%2Cperiod%2Cpound+sign%2C%EF%B9%A4body%EF%B9%A5%2C%EF%B9%A4ul%EF%B9%A5%2C%EF%B9%A4h1%EF%B9%A5%2Cmargin%2C%3C++%3E%2C{+}%2C%EF%B9%A4p%EF%B9%A5%2C%EF%B9%A4!DOCTYPE+html%EF%B9%A5%2C%EF%B9%A4head%EF%B9%A5%2Ccolon%2C%EF%B9%A4style%EF%B9%A5%2C.html%2CHTML%2CCSS%2CJavaScript%2Cborder&freespace=true&freespaceValue=Web+Design+Master&freespaceRandom=false&width=5&height=5&number=35#results
 
        var hint = [
-                   {"label":"Question 1",  "value":1,  "question":"What CSS property is used for specifying the area between the content and its border?"}, // padding
-                   {"label":"Question 2",  "value":2,  "question":"What CSS property is used for changing the font?"}, //font-family
-                   {"label":"Question 3",  "value":3,  "question":"What CSS property is used for changing the color of text?"}, //color
-                   {"label":"Question 4",  "value":4,  "question":"What CSS property is used for changing the boldness of text?"}, //font-weight
-                   {"label":"Question 5",  "value":5,  "question":"What CSS property is used for changing the size of text?"}, //font-size
-                   {"label":"Question 6",  "value":6,  "question":"What CSS property is used for changing the background color of a box?"}, //background-color
-                   {"label":"Question 7",  "value":7,  "question":"Which word is used for specifying an HTML tag that is inside another tag?"}, //nesting
-                   {"label":"Question 8",  "value":8,  "question":"Which side of the box is the third number in: margin:1px 1px 1px 1px; ?"}, //bottom
-                   {"label":"Question 9",  "value":9,  "question":"What are the fonts that don't have serifs at the ends of letters called?"}, //sans-serif
-                   {"label":"Question 10", "value":10, "question":"With CSS selectors, what character prefix should one use to specify a class?"}, //period
-                   {"label":"Question 11", "value":11, "question":"With CSS selectors, what character prefix should one use to specify an ID?"}, //pound sign
-                   {"label":"Question 12", "value":12, "question":"In an HTML document, which tag holds all of the content people see?"}, //<body>
-                   {"label":"Question 13", "value":13, "question":"In an HTML document, which tag indicates an unordered list?"}, //<ul>
-                   {"label":"Question 14", "value":14, "question":"In an HTML document, which tag indicates the most important heading of your document?"}, //<h1>
-                   {"label":"Question 15", "value":15, "question":"What CSS property is used for specifying the area outside a box?"}, //margin
-                   {"label":"Question 16", "value":16, "question":"What type of bracket is used for HTML tags?"}, //< >
-                   {"label":"Question 17", "value":17, "question":"What type of bracket is used for CSS rules?"}, // { }
-                   {"label":"Question 18", "value":18, "question":"Which HTML tag is used for specifying a paragraph?"}, //<p>
+                  {"label":"Question 1",  "value":1,  "question":"What CSS property is used for specifying the area between the content and its border?"}, // padding
+                    {"label":"Question 2",  "value":2,  "question":"hello"}, //font-family
+                    {"label":"Question 3",  "value":3,  "question":"What CSS property is used for changing the color of text?"}, //color
+                    {"label":"Question 4",  "value":4,  "question":"What CSS property is used for changing the boldness of text?"}, //font-weight
+                    {"label":"Question 5",  "value":5,  "question":"hello"}, //font-size
+                    {"label":"Question 6",  "value":6,  "question":"What CSS property is used for changing the background color of a box?"}, //background-color
+                    {"label":"Question 7",  "value":7,  "question":"Which word is used for specifying an HTML tag that is inside another tag?"}, //nesting
+                    {"label":"Question 8",  "value":8,  "question":"hello"}, //bottom
+                    {"label":"Question 9",  "value":9,  "question":"What are the fonts that don't have serifs at the ends of letters called?"}, //sans-serif
+                    {"label":"Question 10", "value":10, "question":"With CSS selectors, what character prefix should one use to specify a class?"}, //period
+                    {"label":"Question 11", "value":11, "question":"With CSS selectors, what character prefix should one use to specify an ID?"}, //pound sign
+                    {"label":"Question 12", "value":12, "question":"hello"}, //<body>
+                    {"label":"Question 13", "value":13, "question":"In an HTML document, which tag indicates an unordered list?"}, //<ul>
+                    {"label":"Question 14", "value":14, "question":"In an HTML document, which tag indicates the most important heading of your document?"}, //<h1>
+                    {"label":"Question 15", "value":15, "question":"hello"}, //margin
+                    {"label":"Question 16", "value":16, "question":"What type of bracket is used for HTML tags?"}, //< >
+                    {"label":"Question 17", "value":17, "question":"What type of bracket is used for CSS rules?"}, // { }
+                    {"label":"Question 18", "value":18, "question":"hello"}, //<p>
                    {"label":"Question 19", "value":19, "question":"What should always be the very first line of code in your HTML?"}, //<!DOCTYPE html>
                    {"label":"Question 20", "value":20, "question":"What HTML tag holds all of the metadata tags for your page?"}, //<head>
-                   {"label":"Question 21", "value":21, "question":"In CSS, what character separates a property from a value?"}, // colon
+                   {"label":"Question 21", "value":21, "question":"hello"}, // colon
                    {"label":"Question 22", "value":22, "question":"What HTML tag holds all of your CSS code?"}, // <style>
                    {"label":"Question 23", "value":23, "question":"What file extension should you use for your web pages?"}, // .html
                    {"label":"Question 24", "value":24, "question":"Which coding language is used for marking up content and structure on a web page?"}, // HTML
                    {"label":"Question 25", "value":25, "question":"Which coding language is used for specifying the design of a web page?"}, // CSS
                    {"label":"Question 26", "value":26, "question":"Which coding language is used for adding functionality to a web page?"}, // JavaScript
-                   {"label":"Question 27", "value":27, "question":"What CSS property is used for making the edges of a box visible?"}, // border
+                   {"label":"Question 27", "value":27, "question":"hello"}, // border
                    {"label":"Question 28", "value":28, "question":"What character symbol is used at the end of each CSS statement?"},//semi-colon
                    {"label":"Question 29", "value":29, "question":"By default, how wide is a <div> box?"}, //100%
                    {"label":"Question 30", "value":30, "question":"What character symbol do I use to specify multiple CSS selectors in one code block?"}, //comma
-                   {"label":"Question 31", "value":31, "question":"By default, how wide is a <div> box?"},
+                   {"label":"Question 31", "value":31, "question":"hello"},
                    {"label":"Question 32", "value":32, "question":"By default, how wide is a <div> box?"},
                    {"label":"Question 33", "value":33, "question":"By default, how wide is a <div> box?"},
                    {"label":"Question 34", "value":34, "question":"By default, how wide is a <div> box?"},
-                   {"label":"Question 35", "value":35, "question":"By default, how wide is a <div> box?"},
+                   {"label":"Question 35", "value":35, "question":"hello"},
                    {"label":"Question 36", "value":36, "question":"By default, how wide is a <div> box?"},
                    {"label":"Question 37", "value":37, "question":"By default, how wide is a <div> box?"},
                    {"label":"Question 38", "value":38, "question":"By default, how wide is a <div> box?"},
                    {"label":"Question 39", "value":39, "question":"By default, how wide is a <div> box?"},
                    {"label":"Question 40", "value":40, "question":"By default, how wide is a <div> box?"},
-                   {"label":"Question 41", "value":41, "question":"By default, how wide is a <div> box?"},
+                   {"label":"Question 41", "value":41, "question":"hello"},
                    {"label":"Question 42", "value":42, "question":"By default, how wide is a <div> box?"},
                    {"label":"Question 43", "value":43, "question":"By default, how wide is a <div> box?"},
                    {"label":"Question 44", "value":44, "question":"By default, how wide is a <div> box?"},
-                   {"label":"Question 45", "value":45, "question":"By default, how wide is a <div> box?"},
+                   {"label":"Question 45", "value":45, "question":"hello"},
                    {"label":"Question 46", "value":46, "question":"By default, how wide is a <div> box?"},
                    
-           ];
-       
+           ];       
        var data = [
                     {"label":"Question 1",  "value":1,  "question":"What CSS property is used for specifying the area between the content and its border?"}, // padding
                     {"label":"Question 2",  "value":2,  "question":"What CSS property is used for changing the font?"}, //font-family
@@ -264,13 +263,25 @@
     }
 }
    $('#myModal').on('show.bs.modal', function (event) {
-	   var button = $(event.relatedTarget) // Button that triggered the modal
-	   var recipient = button.data('whatever') // Extract info from data-* attributes
-	   // If necessary, you could initiate an AJAX request here (and then do the updating in a callback).
-	   // Update the modal's content. We'll use jQuery here, but you could use a data binding library or other methods instead.
-	   var modal = $(this)
-	   modal.find('.modal-body').text(hint[picked].question);
-	 })
+	      var button = $(event.relatedTarget) 
+	      var recipient = button.data('whatever')
+	   document.getElementById("hint").disabled = false;
+		if(hint[picked].question === "hello")
+	   {
+		   
+		  document.getElementById("hint").disabled = true;
+		  
+	   }
+	   else
+	   {
+		  
+       	 document.getElementById("hint").disabled = false;
+         var modal = $(this)
+	     modal.find('.modal-body').text(hint[picked].question);
+	     
+	   }
+	   }) 
+	 
    
   /*  var interval;
     var minutes = 45;
@@ -305,7 +316,7 @@
     } */
 
 	
-function getTimeRemaining(endtime) {
+/*function getTimeRemaining(endtime) {
   var t = new Date("Oct 5, 2017 15:37:25").getTime() -new Date().getTime();
   var seconds = Math.floor((t / 1000) % 60);
   var minutes = Math.floor((t / 1000 / 60) % 60);
@@ -337,3 +348,27 @@ function initializeClock(id, endtime) {
 
 var deadline = new Date("Oct 4, 2017 15:37:25").getTime();
 initializeClock('clockdiv', deadline);
+*/
+<!-- Timer Js-->
+document.getElementById('timer').innerHTML =
+  45 + ":" + 00;
+startTimer();
+
+function startTimer() {
+  var presentTime = document.getElementById('timer').innerHTML;
+  var timeArray = presentTime.split(/[:]+/);
+  var m = timeArray[0];
+  var s = checkSecond((timeArray[1] - 1));
+  if(s==59){m=m-1}
+  //if(m<0){alert('timer completed')}
+  
+  document.getElementById('timer').innerHTML =
+    m + ":" + s;
+  setTimeout(startTimer, 1000);
+}
+
+function checkSecond(sec) {
+  if (sec < 10 && sec >= 0) {sec = "0" + sec}; // add zero in front of numbers < 10
+  if (sec < 0) {sec = "59"};
+  return sec;
+}

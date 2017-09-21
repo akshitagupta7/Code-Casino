@@ -34,14 +34,16 @@
 	
 	<div class="col-sm-4 col-md-4">
 	<div id="clockdiv"><br>
-  <div>
+		  <div><span id="timer"></span></div>
+
+  <!--<div>
     <span class="minutes"></span>
     <div class="smalltext">Minutes</div>
   </div>
   <div>
     <span class="seconds"></span>
     <div class="smalltext">Seconds</div>
-  </div>
+  </div>-->
 </div>
 		<div id="question"><h1></h1></div>
 		<div class="input-group input-group-lg">
@@ -53,23 +55,23 @@
  </div>
  <div class="row">
     <div class="col-sm-12 col-md-12">
-		<ul>
-			<li><button type="submit" name="submit">SUBMIT</button></li>
-			<li><a href="#hint"><id="myBtn" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">A HINT MAYBE</li>
-			<li><a href="end.jsp">QUIT</a></li>
-			<li><a href="instructions.jsp">READ INSTRUCTIONS</a></li>
-		</ul>
+		
+			<button type="submit" name="submit" class="btn btn-lg">SUBMIT</button>
+			<button id="hint" class="btn btn-lg" data-toggle="modal" data-target="#myModal">A HINT MAYBE</button>
+			<a href="end.jsp"><button class="btn btn-lg">QUIT</button></a>
+			<a href="instructions.jsp"><button class="btn btn-lg" data-toggle="modal" data-target="#instModal">READ INSTRUCTIONS</button></a>
+		
 	</div>		 
  
  </div>
 </div>
 </form>
 
-<!-- Modal -->
+<!-- Modal1 -->
 <div id="myModal" class="modal fade" role="dialog">
   <div class="modal-dialog">
 
-    <!-- Modal content-->
+    <!-- Modal1 content-->
     <div class="modal-content">
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal">&times;</button>
@@ -79,6 +81,32 @@
       </div>
     </div>
 
+  </div>
+</div>
+
+<div class="modal fade" id="instModal" tabindex="-1" role="dialog" aria-labelledby="instModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+       <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="instModalLabel">INSTRUCTIONS</h4>
+       </div>
+     <div class="modal-body">
+        <ol><big><h4>
+     <li>The game is a completely random event.</li>
+     <li>Spin the wheel to get a question.</li>
+     <li>The questions based on data structures, algorithms,Basic Programming Concepts or reasoning..</li>
+     <li>After brain storming with the question Submit the answer!</li>
+     <li>Now your luck decides what reward you get for a correct answer</li>
+     <li>The timer to keep on ticking and fate decides whether the next question is harder or easier</li>
+     <li>Wanna quit? You can't resume. Everybody gets one chance!</li> 
+	 <li>Want a hint? You may lose score!</li>
+	 <li>Score the maximum in 45 minutes to win!</li>
+	</h4>
+	</big>
+	</ol> 
+    </div>
+   </div>
   </div>
 </div>
 <script src="https://d3js.org/d3.v3.min.js" charset="utf-8"></script>
