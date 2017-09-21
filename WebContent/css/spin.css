@@ -180,14 +180,17 @@ left:300px;
 .close:hover { background: #000; }
 
 .modal-content{
-		height: 350px;
+		height: 550px;;
 		width: 130%;
 }
 
 .modal-body{
 	color: white;
-	font-size: 20;
-	background-image:url("https://media.giphy.com/media/zbmdkAcEfhP3i/giphy.gif");
+	font-size: 40;
+	background-image:url("https://media.giphy.com/media/26uf2YTgF5upXUTm0/giphy.gif");
+	background-size:cover;
+	background-repeat:no-repeat;
+	opacity:0.9;
 }
 
 .modal-title{

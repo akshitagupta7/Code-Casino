@@ -15,9 +15,6 @@
 
     <!-- Custom styles for this template -->
 	<link href="css/spin.css" rel="stylesheet">
-		
-  <title>Bootstrap Example</title>
-  <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
@@ -92,17 +89,18 @@
         <h4 class="modal-title" id="instModalLabel">INSTRUCTIONS</h4>
        </div>
      <div class="modal-body">
-        <ol><big><h4>
+        <ol><big><h3>
      <li>The game is a completely random event.</li>
      <li>Spin the wheel to get a question.</li>
-     <li>The questions based on data structures, algorithms,Basic Programming Concepts or reasoning..</li>
+     <li>The questions based on Data Sructures, Algorithms, Basic Programming Concepts or reasoning..</li>
      <li>After brain storming with the question Submit the answer!</li>
      <li>Now your luck decides what reward you get for a correct answer</li>
      <li>The timer to keep on ticking and fate decides whether the next question is harder or easier</li>
      <li>Wanna quit? You can't resume. Everybody gets one chance!</li> 
 	 <li>Want a hint? You may lose score!</li>
 	 <li>Score the maximum in 45 minutes to win!</li>
-	</h4>
+	  <li>Try answering in capitals and avoid extra spaces.</li>
+	</h3>
 	</big>
 	</ol> 
     </div>

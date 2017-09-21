@@ -26,21 +26,18 @@
    <ul><big>
      <li>The game is a completely random event.</li>
      <li>Spin the wheel to get a question.</li>
-     <li>The questions based on data structures, algorithms,aptitude,reasoning or general knowledge..</li>
+     <li>The questions based on Data Structures, Algorithms, Basic programming knowledge or reasoning..</li>
      <li>After brain storming with the question Submit the answer!</li>
      <li>Now your luck decides what reward you get for a correct answer</li>
      <li>The timer to keep on ticking and fate decides whether the next question is harder or easier</li>
      <li>Wanna quit? You can't resume. Everybody gets one chance!</li> 
-	 <li>Want a hint? You may lose score or time. That's random too!</li>
+	 <li>Want a hint? You may lose score.</li>
 	 <li>Score the maximum in 45 minutes to win!</li>
 	</big>
 	</ul> </div></div>
 	<div class="row">
   <div class="col-sm-6 col-md-6">
   <button class="btn btn-outline-secondary btn-block"><a href="spin.jsp">START GAME</a></button>
-  </div>
-  <div class="col-sm-6 col-md-6">
-  <button class="btn btn-outline-secondary btn-block"><a href="spin.jsp">RESUME GAME</a></button>
   </div>
 </div>
 
