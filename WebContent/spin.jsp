@@ -31,18 +31,9 @@
 	
 	<div class="col-sm-4 col-md-4">
 	<div id="clockdiv"><br>
-		  <div><span id="timer"></span></div>
-
-  <!--<div>
-    <span class="minutes"></span>
-    <div class="smalltext">Minutes</div>
-  </div>
-  <div>
-    <span class="seconds"></span>
-    <div class="smalltext">Seconds</div>
-  </div>-->
+		  <div id="timer"><span id="countdown"></span></div>
 </div>
-		<div id="question"><h1></h1></div>
+		<div id="question"><h5></h5></div>
 		<div class="input-group input-group-lg">
            <span class="input-group-addon" id="sizing-addon1"><i class="fa fa-lightbulb-o" aria-hidden="true"></i></span>
            <input type="text" name="ans1" id="ans1" class="form-control" size="105" placeholder="Enter Answer"  autocomplete="off" required required>

@@ -1,5 +1,4 @@
-
-	body{
+body{
     background-image:url("https://media.giphy.com/media/xMu2442GXSmyI/giphy.gif");
 	position: relative;
     width: 100%;
@@ -26,19 +25,18 @@
 		display:table;
 		background:white;
 		position:fixed;
-		left:550px;
+		left:530px;
 		top:220px;
 		overflow:auto;
 	    color:#black;
-		font-size: 25px;
-        font-weight:900;
+		font-size: 5px;
         font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-		width: 800px;
+		width: 830px;
 		border: 10px solid #ccc;
-		border-radius: 4px;
+		border-radius: 3px;
        animation: blink 10s step-end infinite alternate;
     }
-	
+
 	.input-group{
 		position:relative;
 		right:140px;
@@ -101,7 +99,7 @@
 	}
 	
 	
-	#countdown{
+	/* #countdown{
 	font-size:30px;
 	color:white;
 	text-decoration:underline;
@@ -110,7 +108,7 @@
 	position:fixed;
 	left:70%;
 	}
-	
+	*/
 	
 	.font{
 font-family: 'Joti One', cursive;
