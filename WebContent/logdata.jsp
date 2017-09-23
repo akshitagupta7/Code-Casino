@@ -25,9 +25,7 @@ while(rs.next())
 
 if(f==1)
 {
-	HttpSession sess=request.getSession();
-	sess.setAttribute("SCORE",0);
-	sess.setAttribute("TEAM_NAME",n);
+	session.setAttribute("TEAM_NAME",n);
 	out.print("<span class=\"text\">WELCOME "+n+"</span>");
 	RequestDispatcher rd=request.getRequestDispatcher("spin.jsp");
 	rd.include(request,response);

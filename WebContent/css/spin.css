@@ -97,18 +97,7 @@ body{
         pointer-events:none;
     
 	}
-	
-	
-	/* #countdown{
-	font-size:30px;
-	color:white;
-	text-decoration:underline;
-	text-shadow:4px 4px 4px blue;
-	width:260px; height:45px;
-	position:fixed;
-	left:70%;
-	}
-	*/
+
 	
 	.font{
 font-family: 'Joti One', cursive;
