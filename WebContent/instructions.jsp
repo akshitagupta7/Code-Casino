@@ -7,6 +7,12 @@
 	  <!-- Bootstrap core CSS -->
 		<link href="https://fonts.googleapis.com/css?family=Righteous" rel="stylesheet">
 		<link href="https://fonts.googleapis.com/css?family=Joti+One" rel="stylesheet">
+		<script
+  src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+  integrity="sha256-k2WSCIexGzOj3Euiig+TlR8gA0EmPjuc79OEeY5L45g="
+  crossorigin="anonymous"></script>
+  <script src="https://npmcdn.com/tether@1.2.4/dist/js/tether.min.js"></script>
+<script src="https://npmcdn.com/bootstrap@4.0.0-alpha.5/dist/js/bootstrap.min.js"></script>
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
 
@@ -17,6 +23,9 @@
 	<link href="https://fonts.googleapis.com/css?family=Abril+Fatface" rel="stylesheet">
 <link href="css/instructions.css" rel="stylesheet">
 </head>
+
+
+
 <body background="imgs/instructions.jpg">
 <div class="page-header">
   <h1>INSTRUCTIONS</h1>
@@ -28,11 +37,13 @@
      <li>Spin the wheel to get a question.</li>
      <li>The questions based on Data Structures, Algorithms, Basic programming knowledge or reasoning..</li>
      <li>After brain storming with the question Submit the answer!</li>
-     <li>Now your luck decides what reward you get for a correct answer</li>
-     <li>The timer to keep on ticking and fate decides whether the next question is harder or easier</li>
+     <li>Now your luck decides what reward you get for a correct answer.</li>
+     <li>The timer will keep on ticking and fate decides whether the next question is harder or easier.</li>
      <li>Wanna quit? You can't resume. Everybody gets one chance!</li> 
 	 <li>Want a hint? You may lose score.</li>
 	 <li>Score the maximum in 45 minutes to win!</li>
+	 <li>Follow the format specified to answer the questions.If not specified then try answering in capitals and avoid unnecessary spaces.</li>
+	 <li>In case of any discrepancy the decision of the organising team will be the final call.</li>
 	</big>
 	</ul> </div></div>
 	<div class="row">

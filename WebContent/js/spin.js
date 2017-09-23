@@ -382,7 +382,7 @@ var interval;
             if(seconds == 0) {
                 if(minutes == 0) {
                     el.innerHTML = "countdown's over!";  
-                    alert("countdown's over!");
+					window.location.href = "end.jsp";
                     clearInterval(interval);
                     return;
                 } else {
@@ -401,9 +401,60 @@ var interval;
         }, 1000);
     }
 
+	function calltimer(){
+		
+		document.getElementById("minute").value=minutes;
+		document.getElementById("second").value=seconds;
+	}
+		document.onclick=function(){
+		calltimer();};
+	
+	
+	//disable back button
+	
+/*	(function (global) { 
+
+    if(typeof (global) === "undefined") {
+        throw new Error("window is undefined");
+    }
+
+    var _hash = "!";
+    var noBackPlease = function () {
+        global.location.href += "#";
+
+        // making sure we have the fruit available for juice (^__^)
+        global.setTimeout(function () {
+            global.location.href += "!";
+        }, 50);
+    };
+
+    global.onhashchange = function () {
+        if (global.location.hash !== _hash) {
+            global.location.hash = _hash;
+        }
+    };
+
+    global.onload = function () {            
+        noBackPlease();
+
+        // disables backspace on page except on input fields and textarea..
+        document.body.onkeydown = function (e) {
+            var elm = e.target.nodeName.toLowerCase();
+            if (e.which === 8 && (elm !== 'input' && elm  !== 'textarea')) {
+                e.preventDefault();
+            }
+            // stopping event bubbling up the DOM tree..
+            e.stopPropagation();
+        };          
+    }
+
+})(window); */
+////////	
 
 function checkSecond(sec) {
   if (sec < 10 && sec >= 0) {sec = "0" + sec}; // add zero in front of numbers < 10
   if (sec < 0) {sec = "59"};
   return sec;
 }
+
+

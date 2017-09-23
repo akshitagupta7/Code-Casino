@@ -10,6 +10,12 @@
 	  <!-- Bootstrap core CSS -->
 		<link href="https://fonts.googleapis.com/css?family=Righteous" rel="stylesheet">
 		<link href="https://fonts.googleapis.com/css?family=Joti+One" rel="stylesheet">
+		<script
+  src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+  integrity="sha256-k2WSCIexGzOj3Euiig+TlR8gA0EmPjuc79OEeY5L45g="
+  crossorigin="anonymous"></script>
+  <script src="https://npmcdn.com/tether@1.2.4/dist/js/tether.min.js"></script>
+<script src="https://npmcdn.com/bootstrap@4.0.0-alpha.5/dist/js/bootstrap.min.js"></script>
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
 
@@ -18,16 +24,13 @@
 
     <!-- Custom styles for this template -->
 	<link href="css/spin.css" rel="stylesheet">
-		
-  <title>Bootstrap Example</title>
-  <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 	</head>
 <form name="form" method="post" action="score.jsp">
-<body>
+<body onload="calltimer()">
 <% 
 	String nn=(String)session.getAttribute("TEAM_NAME");
 	Class.forName("oracle.jdbc.driver.OracleDriver");
@@ -47,13 +50,16 @@
 	
 	<div class="col-sm-4 col-md-4">
 	<div id="clockdiv"><br>
-		  <div id="timer"><span id="countdown"></span></div>
+		  <div id="timer"><span id="countdown"></span>
+		  <input type="hidden" id="minute" name="minute" value="">
+		  <input type="hidden" id="second" name="second" value="">
+		  </div>
 </div>
 		<div id="question"><h1></h1></div>
 		<div class="input-group input-group-lg">
            <span class="input-group-addon" id="sizing-addon1"><i class="fa fa-lightbulb-o" aria-hidden="true"></i></span>
            <input type="text" name="ans1" id="ans1" class="form-control" size="105" placeholder="Enter Answer"  autocomplete="off" required required>
-        	<input type="hidden" id="pick", name="pick" value="">
+        	<input type="hidden" id="pick" name="pick" value="">
         </div>
 	</div>
  </div>
@@ -70,24 +76,21 @@
  </div>
 </div>
 </form>
-    <SCRIPT LANGUAGE="JavaScript">
-        <!--
+    <script LANGUAGE="JavaScript">
+   
         function button1()
         {
             document.form.submit.value = "yes";
             form.submit();
         } 
-        // --> 
-    </SCRIPT>
-    <SCRIPT LANGUAGE="JavaScript">
-        <!--
+ 
         function button2()
         {
             document.form.hint.value = "yes";
             form.submit();
         } 
-        // --> 
-    </SCRIPT>
+      
+    </script>
 <!-- Modal1 -->
 <div id="myModal" class="modal fade" role="dialog">
   <div class="modal-dialog">
@@ -132,15 +135,18 @@
        </div>
      <div class="modal-body">
         <ol><big><h4>
-     <li>The game is a completely random event.</li>
+   <li>The game is a completely random event.</li>
      <li>Spin the wheel to get a question.</li>
-     <li>The questions based on data structures, algorithms,Basic Programming Concepts or reasoning..</li>
+     <li>The questions based on Data Structures, Algorithms, Basic programming knowledge or reasoning..</li>
      <li>After brain storming with the question Submit the answer!</li>
      <li>Now your luck decides what reward you get for a correct answer</li>
-     <li>The timer to keep on ticking and fate decides whether the next question is harder or easier</li>
+     <li>The timer will keep on ticking and fate decides whether the next question is harder or easier</li>
      <li>Wanna quit? You can't resume. Everybody gets one chance!</li> 
-	 <li>Want a hint? You may lose score!</li>
+	 <li>Want a hint? You may lose score.</li>
 	 <li>Score the maximum in 45 minutes to win!</li>
+	 <li>Follow the format specified to answer the questions.</li>
+	 <li>If not specified then try answering in capitals and avoid unnecessary spaces.</li>
+	 <li>In case of any discrepancy the decision of the organising team will be the final call.</li>
 	</h4>
 	</big>
 	</ol> 

@@ -12,11 +12,13 @@
 <%
 	String n=(String)request.getParameter("teamname");
 	String p=(String)request.getParameter("password");
+	int minute=(Integer)request.getParameter("minute");
+	int second=(Integer)request.getParameter("second");
 	Class.forName("oracle.jdbc.driver.OracleDriver");
 Connection con = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:xe","system","system");
 Statement s= con.createStatement();
 int f=0;
-ResultSet rs=s.executeQuery("select * from REGISTER");
+ResultSet rs=s.executeQuery("select * from REGISTER,ANSWERS");
 while(rs.next())
 {
 	if(rs.getString("TEAM_NAME").equals(n) && rs.getString("PASSWORD").equals(p))
