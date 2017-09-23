@@ -22,6 +22,18 @@
 		Statement st= conn.createStatement();
 		int ss=(Integer)session.getAttribute("SCORE");
 		String name=(String)session.getAttribute("TEAM_NAME");
+		String dem=(String)request.getParameter("demo");
+	if (dem != null && dem.compareTo("Hello World") == 0)
+	{
+		PreparedStatement ps=conn.prepareStatement("update ANSWERS set SCORE=? where TEAM_NAME=?");
+		ss-=5;
+	 	session.setAttribute("SCORE",ss);
+	 	ps.setInt(1,ss);
+	 	ps.setString(2,name);
+	 	
+	 	int i=ps.executeUpdate();
+	 	
+	}
 		if(answer.equals("1"))
 		{
 		String res="select * from ANSWERS where TEAM_NAME='Shinjanee'";

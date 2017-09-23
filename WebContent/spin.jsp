@@ -67,7 +67,8 @@
     <div class="col-sm-12 col-md-12">
 		
 			<button type="submit" name="submit" class="btn btn-lg" onClick="button1()">SUBMIT</button>
-			<button id="hint" name="hint" class="btn btn-lg" onClick="button2()" data-toggle="modal" data-target="#myModal">A HINT MAYBE</button>
+			<button id="hint" class="btn btn-lg" onclick="mymFunction()" data-toggle="modal" data-target="#myModal">A HINT MAYBE</button>
+			<input type="hidden" id="demo" name="demo" value="before">
 			<button type="button" name="button" class="btn btn-lg"  data-toggle="modal" data-target="#scoremodal">SCORE</button>
 			<a href="instructions.jsp"><button class="btn btn-lg" data-toggle="modal" data-target="#instModal">READ INSTRUCTIONS</button></a>
 			<a href="end.jsp"><button class="btn btn-lg">QUIT</button></a>
@@ -84,11 +85,6 @@
             form.submit();
         } 
  
-        function button2()
-        {
-            document.form.hint.value = "yes";
-            form.submit();
-        } 
       
     </script>
 <!-- Modal1 -->

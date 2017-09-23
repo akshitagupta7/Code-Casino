@@ -262,6 +262,10 @@
         x.style.display = 'none';
     }
 }
+
+	function mymFunction() {
+	    document.getElementById("demo").value = "Hello World";
+	}
    $('#myModal').on('show.bs.modal', function (event) {
 	      var button = $(event.relatedTarget) 
 	      var recipient = button.data('whatever')
