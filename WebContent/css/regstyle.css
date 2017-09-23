@@ -1,7 +1,8 @@
 body{
 	
     background-color: #525252;
-	opacity:0.85;	
+	opacity:0.85;
+	
 }
 a:hover{
 		text-decoration-line:none;
@@ -9,7 +10,11 @@ a:hover{
 	a:visited{
 		color:white;
 		}
-
+#image{
+	
+	background-size: cover;
+	 background-repeat: no-repeat;
+}
 .centered-form{
 	margin-top: 60px;
 	padding:1px;
@@ -26,15 +31,19 @@ a:hover{
 	padding:1px 0px 2px 0px;
 }
 
-.header{
-	background: rgba(0, 0, 0, 0.3);
-	font-family:  "Times New Roman",Times,serif;
-	font-weight:bold;
-	color:white;	
-}
+
 input::placeholder{
 	color:black;
 	font-weight:bold;
 	text-align: center;
+}
+
+.header{
+	background: rgba(0, 0, 0, 0.3);
+	font-family:  "Times New Roman",Times,serif;
+	font-weight:bold;
+	color: white;
+	
+	
 }
 

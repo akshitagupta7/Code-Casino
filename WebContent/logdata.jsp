@@ -12,11 +12,13 @@
 <%
 	String n=(String)request.getParameter("teamname");
 	String p=(String)request.getParameter("password");
+	int minute=(Integer)request.getParameter("minute");
+	int second=(Integer)request.getParameter("second");
 	Class.forName("oracle.jdbc.driver.OracleDriver");
 Connection con = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:xe","system","system");
 Statement s= con.createStatement();
 int f=0;
-ResultSet rs=s.executeQuery("select * from REGISTER");
+ResultSet rs=s.executeQuery("select * from REGISTER,ANSWERS");
 while(rs.next())
 {
 	if(rs.getString("TEAM_NAME").equals(n) && rs.getString("PASSWORD").equals(p))
@@ -25,9 +27,7 @@ while(rs.next())
 
 if(f==1)
 {
-	HttpSession sess=request.getSession();
-	sess.setAttribute("SCORE",0);
-	sess.setAttribute("TEAM_NAME",n);
+	session.setAttribute("TEAM_NAME",n);
 	out.print("<span class=\"text\">WELCOME "+n+"</span>");
 	RequestDispatcher rd=request.getRequestDispatcher("spin.jsp");
 	rd.include(request,response);

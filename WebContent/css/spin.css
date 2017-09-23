@@ -1,5 +1,4 @@
-
-	body{
+body{
     background-image:url("https://media.giphy.com/media/xMu2442GXSmyI/giphy.gif");
 	position: relative;
     width: 100%;
@@ -26,19 +25,18 @@
 		display:table;
 		background:white;
 		position:fixed;
-		left:550px;
+		left:530px;
 		top:220px;
 		overflow:auto;
 	    color:#black;
-		font-size: 25px;
-        font-weight:900;
+		font-size: 5px;
         font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-		width: 800px;
+		width: 830px;
 		border: 10px solid #ccc;
-		border-radius: 4px;
+		border-radius: 3px;
        animation: blink 10s step-end infinite alternate;
     }
-	
+
 	.input-group{
 		position:relative;
 		right:140px;
@@ -99,18 +97,7 @@
         pointer-events:none;
     
 	}
-	
-	
-	#countdown{
-	font-size:30px;
-	color:white;
-	text-decoration:underline;
-	text-shadow:4px 4px 4px blue;
-	width:260px; height:45px;
-	position:fixed;
-	left:70%;
-	}
-	
+
 	
 	.font{
 font-family: 'Joti One', cursive;
@@ -119,11 +106,7 @@ text-shadow: 2px 2px #A5ABAD;
 opacity: 0.9;
 
 }
- #clockdiv{
-position:relative;
-left:300px;
-	top:10px;
-}
+
 
 #timer{
   font-size:30px;
@@ -135,8 +118,9 @@ left:300px;
 	color: #fff;
 	display: inline-block;
 	font-weight: 80;
-	text-align: center;
-	font-size: 30px;
+	position:relative;
+    left:300px;
+	top:10px;
 }
 
 #clockdiv > div{
@@ -180,14 +164,17 @@ left:300px;
 .close:hover { background: #000; }
 
 .modal-content{
-		height: 350px;
+		height: 550px;;
 		width: 130%;
 }
 
 .modal-body{
 	color: white;
-	font-size: 20;
-	background-image:url("https://media.giphy.com/media/zbmdkAcEfhP3i/giphy.gif");
+	font-size: 40;
+	background-image:url("https://media.giphy.com/media/l2SpYSNrKPONySXYY/giphy.gif");
+	background-size:cover;
+	background-repeat:no-repeat;
+	opacity:0.9;
 }
 
 .modal-title{

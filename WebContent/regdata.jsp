@@ -31,15 +31,39 @@ try
   rs=stat.executeQuery("select * from REGISTER");
   stat.executeUpdate("insert into ANSWERS(TEAM_NAME) values('"+teamname+"')");
   rs=stat.executeQuery("select * from ANSWERS");
- %><iframe src="login.jsp" scrolling="auto"></iframe>
+  stat.executeUpdate("insert into QUESTIONS(TEAM_NAME) values('"+teamname+"')");
+  rs=stat.executeQuery("select * from QUESTIONS");
+  String n=(String)request.getParameter("teamname");
+  HttpSession sess=request.getSession();
+  sess.setAttribute("SCORE",0);
+  sess.setAttribute("TEAM_NAME",n);
+  out.print("<span class=\"text\">WELCOME "+n+"</span>");
+  RequestDispatcher rd=request.getRequestDispatcher("spin.jsp");
+	rd.include(request,response);
+ %>
 
 <% }catch(ClassNotFoundException e)
 {
     out.println(e.getLocalizedMessage());
 }
 %>
-<jsp:forward page="login.jsp"></jsp:forward>
-
+<style>
+.text{
+	color:white;
+	font-weight:bold;
+	position: fixed;
+	font-size:20px;
+	left:45%;
+	top:5%
+	}
+.text1{
+	color:red;
+	font-weight:bold;
+	position: relative;
+	font-size:20px;
+	margin-left:45%;
+}
+</style>
 </body>
 
 </html>
