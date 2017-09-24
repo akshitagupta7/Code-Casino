@@ -33,6 +33,8 @@ try
   rs=stat.executeQuery("select * from ANSWERS");
   stat.executeUpdate("insert into QUESTIONS(TEAM_NAME) values('"+teamname+"')");
   rs=stat.executeQuery("select * from QUESTIONS");
+  stat.executeUpdate("insert into TIMER(TEAM_NAME) values('"+teamname+"')");
+  rs=stat.executeQuery("select * from TIMER");
   String n=(String)request.getParameter("teamname");
   HttpSession sess=request.getSession();
   sess.setAttribute("SCORE",0);

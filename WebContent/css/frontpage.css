@@ -1,11 +1,8 @@
 
 	html, body 
 {
-	background-image:url("..\imgs\background2.gif");
-    background-image:url("https://media.giphy.com/media/QYVgvtinO72Ni/giphy.gif");
-	background-size: cover;
-	background-position: 5% 8%;
-    
+	background-image:url("https://media.giphy.com/media/tL5HmgfZi0Qow/giphy.gif");
+    background-position: 35% 8%;
     margin: 0;
     padding: 0;
 	font-size: 1rem;

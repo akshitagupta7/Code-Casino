@@ -29,7 +29,6 @@ body{
 		top:220px;
 		overflow:auto;
 	    color:#black;
-		font-size: 5px;
         font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 		width: 830px;
 		border: 10px solid #ccc;
@@ -82,7 +81,6 @@ body{
 	}
 	
 	 #ans{
-	
     width: 250px;
     background: none repeat scroll 0% 0% #FFFF00;
     border: 1px solid #91B57C;
@@ -106,7 +104,11 @@ text-shadow: 2px 2px #A5ABAD;
 opacity: 0.9;
 
 }
-
+ #clockdiv{
+position:relative;
+left:300px;
+	top:10px;
+}
 
 #timer{
   font-size:30px;
@@ -118,9 +120,8 @@ opacity: 0.9;
 	color: #fff;
 	display: inline-block;
 	font-weight: 80;
-	position:relative;
-    left:300px;
-	top:10px;
+	text-align: center;
+	font-size: 30px;
 }
 
 #clockdiv > div{
@@ -171,7 +172,7 @@ opacity: 0.9;
 .modal-body{
 	color: white;
 	font-size: 40;
-	background-image:url("https://media.giphy.com/media/l2SpYSNrKPONySXYY/giphy.gif");
+	background-image:url("https://media.giphy.com/media/26uf2YTgF5upXUTm0/giphy.gif");
 	background-size:cover;
 	background-repeat:no-repeat;
 	opacity:0.9;
