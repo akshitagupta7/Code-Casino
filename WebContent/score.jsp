@@ -14,7 +14,7 @@
 try
 {
 	
-	
+
 	String ans=(String)request.getParameter("ans1");
 	String answer=(String)request.getParameter("pick");
 	Class.forName("oracle.jdbc.driver.OracleDriver");
@@ -23,6 +23,59 @@ try
 	int ss=(Integer)session.getAttribute("SCORE");
 	String name=(String)session.getAttribute("TEAM_NAME");
 	
+	Connection conne = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:xe","system","system");
+	String str="select * from QUESTIONS where TEAM_NAME=?";
+	PreparedStatement sta=conne.prepareStatement(str);
+	sta.setString(1,name);
+	ResultSet rset=sta.executeQuery();
+	String s1="0";String s2="0";
+	String s3="0";String s4="0";
+	String s5="0";String s6="0";
+	String s7="0";String s8="0";
+	String s9="0";String s10="0";
+	String s11="0";String s12="0";
+	String s13="0";String s14="0";
+	String s15="0";String s16="0";
+	String s17="0";String s18="0";
+	String s19="0";String s20="0";
+	String s21="0";String s22="0";
+	String s23="0";String s24="0";
+	String s25="0";String s26="0";
+	String s27="0";String s28="0";
+	String s29="0";String s30="0";
+	String s31="0";String s32="0";
+	String s33="0";String s34="0";
+	String s35="0";String s36="0";
+	String s37="0";String s38="0";
+	String s39="0";String s40="0";
+	String s41="0";String s42="0";
+	String s43="0";String s44="0";
+	String s45="0";String s46="0";
+	while(rset.next()){
+	     s1=(String)rset.getString("Q1");s2=(String)rset.getString("Q2");
+	     s3=(String)rset.getString("Q3");s4=(String)rset.getString("Q4");
+	     s5=(String)rset.getString("Q5");s6=(String)rset.getString("Q6");
+	     s7=(String)rset.getString("Q7");s8=(String)rset.getString("Q8");
+	     s9=(String)rset.getString("Q9");s10=(String)rset.getString("Q10");
+	     s11=(String)rset.getString("Q11");s12=(String)rset.getString("Q12");
+	     s13=(String)rset.getString("Q13");s14=(String)rset.getString("Q14");
+	     s15=(String)rset.getString("Q15");s16=(String)rset.getString("Q16");
+	     s17=(String)rset.getString("Q17");s18=(String)rset.getString("Q18");
+	     s19=(String)rset.getString("Q19");s20=(String)rset.getString("Q20");
+	     s21=(String)rset.getString("Q21");s22=(String)rset.getString("Q22");
+	     s23=(String)rset.getString("Q23");s24=(String)rset.getString("Q24");
+	     s25=(String)rset.getString("Q25");s26=(String)rset.getString("Q26");
+	     s27=(String)rset.getString("Q27");s28=(String)rset.getString("Q28");
+	     s29=(String)rset.getString("Q29");s30=(String)rset.getString("Q30");
+	     s31=(String)rset.getString("Q31");s32=(String)rset.getString("Q32");
+	     s33=(String)rset.getString("Q33");s34=(String)rset.getString("Q34");
+	     s35=(String)rset.getString("Q35");s36=(String)rset.getString("Q36");
+	     s37=(String)rset.getString("Q37");s38=(String)rset.getString("Q38");
+	     s39=(String)rset.getString("Q39");s40=(String)rset.getString("Q40");
+	     s41=(String)rset.getString("Q41");s42=(String)rset.getString("Q42");
+	     s43=(String)rset.getString("Q43");s44=(String)rset.getString("Q44");
+	     s45=(String)rset.getString("Q45");s46=(String)rset.getString("Q46");
+	}
 	String dem=(String)request.getParameter("demo");
 	if (dem != null && dem.compareTo("No hint") != 0 && dem.compareTo("before") != 0)
 	{
@@ -40,20 +93,21 @@ try
 	
 	if(answer.equals("1"))
 	{
-	String res="select * from ANSWERS where TEAM_NAME='Shinjanee'";
-	PreparedStatement s=conn.prepareStatement(res);
-	ResultSet rs=s.executeQuery();
-	PreparedStatement ps=conn.prepareStatement("update ANSWERS set SCORE=?,A1=? where TEAM_NAME=?");
-	while(rs.next()){
-	if(rs.getString("A1").equals(ans))
-	ss+=10;}
- 	session.setAttribute("SCORE",ss);
- 	session.setAttribute("A1",ans);
-	ps.setInt(1,ss);
-	ps.setString(2,ans);
-	ps.setString(3,name);
-	int i=ps.executeUpdate();
-	if(request.getParameter("submit") != null) {
+		String res="select * from ANSWERS where TEAM_NAME='Shinjanee'";
+		PreparedStatement s=conn.prepareStatement(res);
+		ResultSet rs=s.executeQuery();
+		PreparedStatement ps=conn.prepareStatement("update ANSWERS set SCORE=?,A1=? where TEAM_NAME=?");
+		while(rs.next()){
+		if(rs.getString("A1").equals(ans))
+			if(s1.equals("0"))
+				ss+=10;}
+ 		session.setAttribute("SCORE",ss);
+ 		session.setAttribute("A1",ans);
+		ps.setInt(1,ss);
+		ps.setString(2,ans);
+		ps.setString(3,name);
+		int i=ps.executeUpdate();
+		if(request.getParameter("submit") != null) {
     		PreparedStatement p=conn.prepareStatement("update QUESTIONS set Q1=? where TEAM_NAME=?");
     	 	session.setAttribute("Q1",answer);
     	 	p.setString(1,answer);
@@ -61,6 +115,7 @@ try
     		int j=p.executeUpdate();
      }
 	}
+
 	else if(answer.equals("2"))
 	{
 		String res="select * from ANSWERS where TEAM_NAME='Shinjanee'";
@@ -69,7 +124,8 @@ try
 		PreparedStatement ps=conn.prepareStatement("update ANSWERS set SCORE=?,A2=? where TEAM_NAME=?");
 		while(rs.next()){
 		if(rs.getString("A2").equals(ans))
-		ss+=10;}
+			if(s2.equals("0"))
+				ss+=10;}
  		session.setAttribute("SCORE",ss);
  		session.setAttribute("A2",ans);
 		ps.setInt(1,ss);
@@ -92,7 +148,8 @@ try
 		PreparedStatement ps=conn.prepareStatement("update ANSWERS set SCORE=?,A3=? where TEAM_NAME=?");
 		while(rs.next()){
 		if(rs.getString("A3").equals(ans))
-		ss+=10;}
+			if(s3.equals("0"))
+				ss+=10;}
 	 	session.setAttribute("SCORE",ss);
 	 	session.setAttribute("A3",ans);
 		ps.setInt(1,ss);
@@ -115,7 +172,8 @@ try
 		PreparedStatement ps=conn.prepareStatement("update ANSWERS set SCORE=?,A4=? where TEAM_NAME=?");
 		while(rs.next()){
 		if(rs.getString("A4").equals(ans))
-		ss+=10;}
+			if(s4.equals("0"))
+				ss+=10;}
 	 	session.setAttribute("SCORE",ss);
 	 	session.setAttribute("A4",ans);
 		ps.setInt(1,ss);
@@ -138,7 +196,8 @@ try
 		PreparedStatement ps=conn.prepareStatement("update ANSWERS set SCORE=?,A5=? where TEAM_NAME=?");
 		while(rs.next()){
 		if(rs.getString("A5").equals(ans))
-		ss+=10;}
+			if(s5.equals("0"))
+				ss+=10;}
 	 	session.setAttribute("SCORE",ss);
 	 	session.setAttribute("A5",ans);
 		ps.setInt(1,ss);
@@ -162,7 +221,8 @@ try
 		PreparedStatement ps=conn.prepareStatement("update ANSWERS set SCORE=?,A6=? where TEAM_NAME=?");
 		while(rs.next()){
 		if(rs.getString("A6").equals(ans))
-		ss+=10;}
+			if(s6.equals("0"))
+				ss+=10;}
 	 	session.setAttribute("SCORE",ss);
 	 	session.setAttribute("A6",ans);
 		ps.setInt(1,ss);
@@ -186,7 +246,8 @@ try
 		PreparedStatement ps=conn.prepareStatement("update ANSWERS set SCORE=?,A7=? where TEAM_NAME=?");
 		while(rs.next()){
 		if(rs.getString("A7").equals(ans))
-		ss+=10;}
+			if(s7.equals("0"))
+				ss+=10;}
 	 	session.setAttribute("SCORE",ss);
 	 	session.setAttribute("A7",ans);
 		ps.setInt(1,ss);
@@ -209,7 +270,8 @@ try
 		PreparedStatement ps=conn.prepareStatement("update ANSWERS set SCORE=?,A8=? where TEAM_NAME=?");
 		while(rs.next()){
 		if(rs.getString("A8").equals(ans))
-		ss+=10;}
+			if(s8.equals("0"))
+				ss+=10;}
 	 	session.setAttribute("SCORE",ss);
 	 	session.setAttribute("A8",ans);
 		ps.setInt(1,ss);
@@ -232,7 +294,8 @@ try
 		PreparedStatement ps=conn.prepareStatement("update ANSWERS set SCORE=?,A9=? where TEAM_NAME=?");
 		while(rs.next()){
 		if(rs.getString("A9").equals(ans))
-		ss+=10;}
+			if(s9.equals("0"))
+				ss+=10;}
 	 	session.setAttribute("SCORE",ss);
 	 	session.setAttribute("A9",ans);
 		ps.setInt(1,ss);
@@ -255,7 +318,8 @@ try
 		PreparedStatement ps=conn.prepareStatement("update ANSWERS set SCORE=?,A10=? where TEAM_NAME=?");
 		while(rs.next()){
 		if(rs.getString("A10").equals(ans))
-		ss+=10;}
+			if(s10.equals("0"))
+				ss+=10;}
 	 	session.setAttribute("SCORE",ss);
 	 	session.setAttribute("A10",ans);
 		ps.setInt(1,ss);
@@ -278,7 +342,8 @@ try
 		PreparedStatement ps=conn.prepareStatement("update ANSWERS set SCORE=?,A11=? where TEAM_NAME=?");
 		while(rs.next()){
 		if(rs.getString("A11").equals(ans))
-		ss+=10;}
+			if(s11.equals("0"))
+				ss+=10;}
 	 	session.setAttribute("SCORE",ss);
 	 	session.setAttribute("A11",ans);
 		ps.setInt(1,ss);
@@ -301,7 +366,8 @@ try
 		PreparedStatement ps=conn.prepareStatement("update ANSWERS set SCORE=?,A12=? where TEAM_NAME=?");
 		while(rs.next()){
 		if(rs.getString("A12").equals(ans))
-		ss+=10;}
+			if(s12.equals("0"))
+				ss+=10;}
 	 	session.setAttribute("SCORE",ss);
 	 	session.setAttribute("A12",ans);
 		ps.setInt(1,ss);
@@ -324,7 +390,8 @@ try
 		PreparedStatement ps=conn.prepareStatement("update ANSWERS set SCORE=?,A13=? where TEAM_NAME=?");
 		while(rs.next()){
 		if(rs.getString("A13").equals(ans))
-		ss+=10;}
+			if(s13.equals("0"))
+				ss+=10;}
 	 	session.setAttribute("SCORE",ss);
 	 	session.setAttribute("A13",ans);
 		ps.setInt(1,ss);
@@ -347,7 +414,8 @@ try
 		PreparedStatement ps=conn.prepareStatement("update ANSWERS set SCORE=?,A14=? where TEAM_NAME=?");
 		while(rs.next()){
 		if(rs.getString("A14").equals(ans))
-		ss+=10;}
+			if(s14.equals("0"))
+				ss+=10;}
 	 	session.setAttribute("SCORE",ss);
 	 	session.setAttribute("A14",ans);
 		ps.setInt(1,ss);
@@ -370,7 +438,8 @@ try
 		PreparedStatement ps=conn.prepareStatement("update ANSWERS set SCORE=?,A15=? where TEAM_NAME=?");
 		while(rs.next()){
 		if(rs.getString("A15").equals(ans))
-		ss+=10;}
+			if(s15.equals("0"))
+				ss+=10;}
 	 	session.setAttribute("SCORE",ss);
 	 	session.setAttribute("A15",ans);
 		ps.setInt(1,ss);
@@ -393,7 +462,8 @@ try
 		PreparedStatement ps=conn.prepareStatement("update ANSWERS set SCORE=?,A16=? where TEAM_NAME=?");
 		while(rs.next()){
 		if(rs.getString("A16").equals(ans))
-		ss+=10;}
+			if(s16.equals("0"))
+				ss+=10;}
 	 	session.setAttribute("SCORE",ss);
 	 	session.setAttribute("A16",ans);
 		ps.setInt(1,ss);
@@ -416,7 +486,8 @@ try
 		PreparedStatement ps=conn.prepareStatement("update ANSWERS set SCORE=?,A17=? where TEAM_NAME=?");
 		while(rs.next()){
 		if(rs.getString("A17").equals(ans))
-		ss+=10;}
+			if(s17.equals("0"))
+				ss+=10;}
 	 	session.setAttribute("SCORE",ss);
 	 	session.setAttribute("A1",ans);
 		ps.setInt(1,ss);
@@ -439,7 +510,8 @@ try
 		PreparedStatement ps=conn.prepareStatement("update ANSWERS set SCORE=?,A18=? where TEAM_NAME=?");
 		while(rs.next()){
 		if(rs.getString("A18").equals(ans))
-		ss+=10;}
+			if(s18.equals("0"))
+				ss+=10;}
 	 	session.setAttribute("SCORE",ss);
 	 	session.setAttribute("A18",ans);
 		ps.setInt(1,ss);
@@ -462,7 +534,8 @@ try
 		PreparedStatement ps=conn.prepareStatement("update ANSWERS set SCORE=?,A19=? where TEAM_NAME=?");
 		while(rs.next()){
 		if(rs.getString("A19").equals(ans))
-		ss+=10;}
+			if(s19.equals("0"))
+				ss+=10;}
 	 	session.setAttribute("SCORE",ss);
 	 	session.setAttribute("A19",ans);
 		ps.setInt(1,ss);
@@ -485,7 +558,8 @@ try
 		PreparedStatement ps=conn.prepareStatement("update ANSWERS set SCORE=?,A20=? where TEAM_NAME=?");
 		while(rs.next()){
 		if(rs.getString("A20").equals(ans))
-		ss+=10;}
+			if(s20.equals("0"))
+				ss+=10;}
 	 	session.setAttribute("SCORE",ss);
 	 	session.setAttribute("A20",ans);
 		ps.setInt(1,ss);
@@ -508,7 +582,8 @@ try
 		PreparedStatement ps=conn.prepareStatement("update ANSWERS set SCORE=?,A21=? where TEAM_NAME=?");
 		while(rs.next()){
 		if(rs.getString("A21").equals(ans))
-		ss+=10;}
+			if(s21.equals("0"))
+				ss+=10;}
 	 	session.setAttribute("SCORE",ss);
 	 	session.setAttribute("A21",ans);
 		ps.setInt(1,ss);
@@ -532,7 +607,8 @@ try
 		PreparedStatement ps=conn.prepareStatement("update ANSWERS set SCORE=?,A22=? where TEAM_NAME=?");
 		while(rs.next()){
 		if(rs.getString("A22").equals(ans))
-		ss+=10;}
+			if(s22.equals("0"))
+				ss+=10;}
 	 	session.setAttribute("SCORE",ss);
 	 	session.setAttribute("A22",ans);
 		ps.setInt(1,ss);
@@ -555,7 +631,8 @@ try
 		PreparedStatement ps=conn.prepareStatement("update ANSWERS set SCORE=?,A23=? where TEAM_NAME=?");
 		while(rs.next()){
 		if(rs.getString("A23").equals(ans))
-		ss+=10;}
+			if(s23.equals("0"))
+				ss+=10;}
 	 	session.setAttribute("SCORE",ss);
 	 	session.setAttribute("A23",ans);
 		ps.setInt(1,ss);
@@ -578,7 +655,8 @@ try
 		PreparedStatement ps=conn.prepareStatement("update ANSWERS set SCORE=?,A24=? where TEAM_NAME=?");
 		while(rs.next()){
 		if(rs.getString("A24").equals(ans))
-		ss+=10;}
+			if(s24.equals("0"))
+				ss+=10;}
 	 	session.setAttribute("SCORE",ss);
 	 	session.setAttribute("A24",ans);
 		ps.setInt(1,ss);
@@ -601,7 +679,8 @@ try
 		PreparedStatement ps=conn.prepareStatement("update ANSWERS set SCORE=?,A25=? where TEAM_NAME=?");
 		while(rs.next()){
 		if(rs.getString("A25").equals(ans))
-		ss+=10;}
+			if(s25.equals("0"))
+				ss+=10;}
 	 	session.setAttribute("SCORE",ss);
 	 	session.setAttribute("A25",ans);
 		ps.setInt(1,ss);
@@ -624,7 +703,8 @@ try
 		PreparedStatement ps=conn.prepareStatement("update ANSWERS set SCORE=?,A26=? where TEAM_NAME=?");
 		while(rs.next()){
 		if(rs.getString("A26").equals(ans))
-		ss+=10;}
+			if(s26.equals("0"))
+				ss+=10;}
 	 	session.setAttribute("SCORE",ss);
 	 	session.setAttribute("A26",ans);
 		ps.setInt(1,ss);
@@ -647,7 +727,8 @@ try
 		PreparedStatement ps=conn.prepareStatement("update ANSWERS set SCORE=?,A27=? where TEAM_NAME=?");
 		while(rs.next()){
 		if(rs.getString("A27").equals(ans))
-		ss+=10;}
+			if(s27.equals("0"))
+				ss+=10;}
 	 	session.setAttribute("SCORE",ss);
 	 	session.setAttribute("A27",ans);
 		ps.setInt(1,ss);
@@ -670,7 +751,8 @@ try
 		PreparedStatement ps=conn.prepareStatement("update ANSWERS set SCORE=?,A28=? where TEAM_NAME=?");
 		while(rs.next()){
 		if(rs.getString("A28").equals(ans))
-		ss+=10;}
+			if(s28.equals("0"))
+				ss+=10;}
 	 	session.setAttribute("SCORE",ss);
 	 	session.setAttribute("A28",ans);
 		ps.setInt(1,ss);
@@ -693,7 +775,8 @@ try
 		PreparedStatement ps=conn.prepareStatement("update ANSWERS set SCORE=?,A29=? where TEAM_NAME=?");
 		while(rs.next()){
 		if(rs.getString("A29").equals(ans))
-		ss+=10;}
+			if(s29.equals("0"))
+				ss+=10;}
 	 	session.setAttribute("SCORE",ss);
 	 	session.setAttribute("A29",ans);
 		ps.setInt(1,ss);
@@ -716,7 +799,8 @@ try
 		PreparedStatement ps=conn.prepareStatement("update ANSWERS set SCORE=?,A30=? where TEAM_NAME=?");
 		while(rs.next()){
 		if(rs.getString("A30").equals(ans))
-		ss+=10;}
+			if(s30.equals("0"))
+				ss+=10;}
 	 	session.setAttribute("SCORE",ss);
 	 	session.setAttribute("A30",ans);
 		ps.setInt(1,ss);
@@ -739,7 +823,8 @@ try
 		PreparedStatement ps=conn.prepareStatement("update ANSWERS set SCORE=?,A31=? where TEAM_NAME=?");
 		while(rs.next()){
 		if(rs.getString("A31").equals(ans))
-		ss+=10;}
+			if(s31.equals("0"))
+				ss+=10;}
 	 	session.setAttribute("SCORE",ss);
 	 	session.setAttribute("A31",ans);
 		ps.setInt(1,ss);
@@ -762,7 +847,8 @@ try
 		PreparedStatement ps=conn.prepareStatement("update ANSWERS set SCORE=?,A32=? where TEAM_NAME=?");
 		while(rs.next()){
 		if(rs.getString("A32").equals(ans))
-		ss+=10;}
+			if(s32.equals("0"))
+				ss+=10;}
 	 	session.setAttribute("SCORE",ss);
 	 	session.setAttribute("A32",ans);
 		ps.setInt(1,ss);
@@ -785,7 +871,8 @@ try
 		PreparedStatement ps=conn.prepareStatement("update ANSWERS set SCORE=?,A33=? where TEAM_NAME=?");
 		while(rs.next()){
 		if(rs.getString("A33").equals(ans))
-		ss+=10;}
+			if(s33.equals("0"))
+				ss+=10;}
 	 	session.setAttribute("SCORE",ss);
 	 	session.setAttribute("A33",ans);
 		ps.setInt(1,ss);
@@ -808,7 +895,8 @@ try
 		PreparedStatement ps=conn.prepareStatement("update ANSWERS set SCORE=?,A34=? where TEAM_NAME=?");
 		while(rs.next()){
 		if(rs.getString("A34").equals(ans))
-		ss+=10;}
+			if(s34.equals("0"))
+				ss+=10;}
 	 	session.setAttribute("SCORE",ss);
 	 	session.setAttribute("A34",ans);
 		ps.setInt(1,ss);
@@ -831,7 +919,8 @@ try
 		PreparedStatement ps=conn.prepareStatement("update ANSWERS set SCORE=?,A35=? where TEAM_NAME=?");
 		while(rs.next()){
 		if(rs.getString("A35").equals(ans))
-		ss+=10;}
+			if(s35.equals("0"))
+				ss+=10;}
 	 	session.setAttribute("SCORE",ss);
 	 	session.setAttribute("A35",ans);
 		ps.setInt(1,ss);
@@ -854,7 +943,8 @@ try
 		PreparedStatement ps=conn.prepareStatement("update ANSWERS set SCORE=?,A36=? where TEAM_NAME=?");
 		while(rs.next()){
 		if(rs.getString("A36").equals(ans))
-		ss+=10;}
+			if(s36.equals("0"))
+				ss+=10;}
 	 	session.setAttribute("SCORE",ss);
 	 	session.setAttribute("A36",ans);
 		ps.setInt(1,ss);
@@ -877,7 +967,8 @@ try
 		PreparedStatement ps=conn.prepareStatement("update ANSWERS set SCORE=?,A37=? where TEAM_NAME=?");
 		while(rs.next()){
 		if(rs.getString("A37").equals(ans))
-		ss+=10;}
+			if(s37.equals("0"))
+				ss+=10;}
 	 	session.setAttribute("SCORE",ss);
 	 	session.setAttribute("A37",ans);
 		ps.setInt(1,ss);
@@ -900,7 +991,8 @@ try
 		PreparedStatement ps=conn.prepareStatement("update ANSWERS set SCORE=?,A38=? where TEAM_NAME=?");
 		while(rs.next()){
 		if(rs.getString("A38").equals(ans))
-		ss+=10;}
+			if(s38.equals("0"))
+				ss+=10;}
 	 	session.setAttribute("SCORE",ss);
 	 	session.setAttribute("A38",ans);
 		ps.setInt(1,ss);
@@ -923,7 +1015,8 @@ try
 		PreparedStatement ps=conn.prepareStatement("update ANSWERS set SCORE=?,A39=? where TEAM_NAME=?");
 		while(rs.next()){
 		if(rs.getString("A39").equals(ans))
-		ss+=10;}
+			if(s39.equals("0"))
+				ss+=10;}
 	 	session.setAttribute("SCORE",ss);
 	 	session.setAttribute("A39",ans);
 		ps.setInt(1,ss);
@@ -946,7 +1039,8 @@ try
 		PreparedStatement ps=conn.prepareStatement("update ANSWERS set SCORE=?,A40=? where TEAM_NAME=?");
 		while(rs.next()){
 		if(rs.getString("A40").equals(ans))
-		ss+=10;}
+			if(s40.equals("0"))
+				ss+=10;}
 	 	session.setAttribute("SCORE",ss);
 	 	session.setAttribute("A40",ans);
 		ps.setInt(1,ss);
@@ -969,7 +1063,8 @@ try
 		PreparedStatement ps=conn.prepareStatement("update ANSWERS set SCORE=?,A41=? where TEAM_NAME=?");
 		while(rs.next()){
 		if(rs.getString("A41").equals(ans))
-		ss+=10;}
+			if(s41.equals("0"))
+				ss+=10;}
 	 	session.setAttribute("SCORE",ss);
 	 	session.setAttribute("A41",ans);
 		ps.setInt(1,ss);
@@ -992,7 +1087,8 @@ try
 		PreparedStatement ps=conn.prepareStatement("update ANSWERS set SCORE=?,A42=? where TEAM_NAME=?");
 		while(rs.next()){
 		if(rs.getString("A42").equals(ans))
-		ss+=10;}
+			if(s42.equals("0"))
+				ss+=10;}
 	 	session.setAttribute("SCORE",ss);
 	 	session.setAttribute("A42",ans);
 		ps.setInt(1,ss);
@@ -1015,7 +1111,8 @@ try
 		PreparedStatement ps=conn.prepareStatement("update ANSWERS set SCORE=?,A43=? where TEAM_NAME=?");
 		while(rs.next()){
 		if(rs.getString("A43").equals(ans))
-		ss+=10;}
+			if(s43.equals("0"))
+				ss+=10;}
 	 	session.setAttribute("SCORE",ss);
 	 	session.setAttribute("A43",ans);
 		ps.setInt(1,ss);
@@ -1038,7 +1135,8 @@ try
 		PreparedStatement ps=conn.prepareStatement("update ANSWERS set SCORE=?,A1=? where TEAM_NAME=?");
 		while(rs.next()){
 		if(rs.getString("A1").equals(ans))
-		ss+=10;}
+			if(s44.equals("0"))
+				ss+=10;}
 	 	session.setAttribute("SCORE",ss);
 	 	session.setAttribute("A44",ans);
 		ps.setInt(1,ss);
@@ -1061,7 +1159,8 @@ try
 		PreparedStatement ps=conn.prepareStatement("update ANSWERS set SCORE=?,A5=? where TEAM_NAME=?");
 		while(rs.next()){
 		if(rs.getString("A45").equals(ans))
-		ss+=10;}
+			if(s45.equals("0"))
+				ss+=10;}
 	 	session.setAttribute("SCORE",ss);
 	 	session.setAttribute("A45",ans);
 		ps.setInt(1,ss);
@@ -1084,7 +1183,8 @@ try
 		PreparedStatement ps=conn.prepareStatement("update ANSWERS set SCORE=?,A46=? where TEAM_NAME=?");
 		while(rs.next()){
 		if(rs.getString("A46").equals(ans))
-		ss+=10;}
+			if(s46.equals("0"))
+				ss+=10;}
 	 	session.setAttribute("SCORE",ss);
 	 	session.setAttribute("A46",ans);
 		ps.setInt(1,ss);

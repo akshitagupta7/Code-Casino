@@ -275,8 +275,6 @@ var padding = {top:20, right:40, bottom:0, left:0},
 	     
 	   
 	   })
-function checkSecond(sec) {
-	  if (sec < 10 && sec >= 0) {sec = "0" + sec}; // add zero in front of numbers < 10
-	  if (sec < 0) {sec = "59"};
-	  return sec;
-	}
+	   
+	   
+	       

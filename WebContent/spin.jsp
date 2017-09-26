@@ -17,7 +17,7 @@
 	<script src="https://use.fontawesome.com/6c522c1f28.js"></script>
 
     <!-- Custom styles for this template -->
-	<link href="..\css\spin.css" rel="stylesheet">
+	<link href="css/spin.css" rel="stylesheet">
 		
   <title>Bootstrap Example</title>
   <meta charset="utf-8">
@@ -26,9 +26,18 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 	</head>
-	<body  onload="calltimer()">
 <form name="form" method="post" action="score.jsp">
-
+<% 
+	String nn=(String)session.getAttribute("TEAM_NAME");
+	Class.forName("oracle.jdbc.driver.OracleDriver");
+	Connection connection = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:xe","system","system");
+	Statement stat= connection.createStatement();
+	String r="select SCORE from ANSWERS where TEAM_NAME=?";
+	PreparedStatement t=connection.prepareStatement(r);
+	t.setString(1,nn);
+	ResultSet set=t.executeQuery();
+	%>
+<body>
 	<div class="container-fluid">
  <div class="row">
 
@@ -39,7 +48,7 @@
 	<div class="col-sm-4 col-md-4">
 	<div id="clockdiv"><br>
 		  <div id="timer"><span id="countdown"></span>
-		  		  <input type="hidden" id="minute" name="minute" value="60">
+		  <input type="hidden" id="minute" name="minute" value="60">
 		  <input type="hidden" id="second" name="second" value="0">
 		  </div>
 </div>
@@ -47,10 +56,8 @@
 		<div class="input-group input-group-lg">
            <span class="input-group-addon" id="sizing-addon1"><i class="fa fa-lightbulb-o" aria-hidden="true"></i></span>
            <input type="text" name="ans1" id="ans1" class="form-control" size="105" placeholder="Enter Answer"  autocomplete="off" required required>
-        	<input type="hidden" id="pick" name="pick" value="">
+        	<input type="hidden" id="pick", name="pick" value="">
         	<input type="hidden" id="demo" name="demo" value="before">
-        	<input type="hidden" id="scr" name="scr" value="unclicked">
-        	
         </div>
 	</div>
  </div>
@@ -61,28 +68,27 @@
 			<button type="button" id="hint" name="hint" onClick="mymfunction()" class="btn btn-lg" data-toggle="modal" data-target="#hintmodal">A HINT MAYBE</button>
 			<button type="button" name="button" class="btn btn-lg"  data-toggle="modal" data-target="#scoremodal">SCORE</button>
 			<a href="instructions.jsp"><button class="btn btn-lg" data-toggle="modal" data-target="#instModal">READ INSTRUCTIONS</button></a>
-			<a href="end.jsp"><button class="btn btn-lg">QUIT</button></a>
+			<button class="btn btn-lg" onClick="fun()">QUIT</button>
 	</div>		 
  
  </div>
 </div>
 </form>
-    
-    <script type="text/javascript">
+    <SCRIPT LANGUAGE="JavaScript">
+        function button1()
+        {
+            document.form.submit.value = "yes";
+            form.submit();
+        } 
         
-    function button1()
-    {
-        document.form.submit.value = "yes";
-        form.submit();
-    } 
-        
+    </SCRIPT>
+    <SCRIPT LANGUAGE="JavaScript">
         function fun()
         {
             window.location="end.jsp";
         } 
-          
-        </script>
-    
+        
+    </SCRIPT>
     
 <!-- Modal1 -->
 <div id="scoremodal" class="modal fade" role="dialog">
@@ -95,37 +101,7 @@
         <h4 class="modal-title">SCORE</h4>
       </div>
       <div class="modal-body">
-      <%  
-	String scor=(String)request.getParameter("scr");
-	String nn=(String)session.getAttribute("TEAM_NAME");
-	Class.forName("oracle.jdbc.driver.OracleDriver");
-	Connection connection = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:xe","system","admin");
-	
-	
-	try
-	{
-	if (scor != null && scor.compareTo("clicked") != 0)
-{
-	
-	Statement stat= connection.createStatement();
-	String r="select SCORE from ANSWERS where TEAM_NAME=?";
-	PreparedStatement t=connection.prepareStatement(r);
-	t.setString(1,nn);
-	ResultSet rst=t.executeQuery();
-	%>
-	  <p style="font-size:50px">SCORE: <%while(rst.next()){out.print(rst.getInt("SCORE"));} %></p>
-	  <%
-}
-}
-
-catch(Exception e)
-{
-	out.print(e);
-}
-	
-%>
-      
-    
+      <p style="font-size:60px">SCORE: <%while(set.next()){out.print(set.getInt("SCORE"));} %></p>
       </div>
     </div>
 
@@ -173,6 +149,7 @@ catch(Exception e)
    </div>
   </div>
 </div>
+
 <script>
 
 <%
@@ -182,17 +159,14 @@ if(request.getParameter("submit") != null) {
 		String minute=(String)request.getParameter("minute");
 		String second=(String)request.getParameter("second");
 		Class.forName("oracle.jdbc.driver.OracleDriver");
-		Connection con = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:xe","system","admin");
+		Connection con = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:xe","system","system");
 		Statement statement= con.createStatement();
     		PreparedStatement prep=con.prepareStatement("update ANSWERS set minute=?,second=? where TEAM_NAME=?");
     	 	prep.setString(1,minute);
 			prep.setString(2,second);
 			prep.setString(3,n);
-			System.out.println("hey");
     		int k=prep.executeUpdate();
-    		if(k==1){
-    			System.out.println("no hey");
-    		}
+    	
      }
      %>
 
@@ -208,11 +182,7 @@ var interval;
 try {
 	 ResultSet rsm=null;
 	 //ResultSet rsm2=null;
-  Connection con = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:xe","system","admin");
-  if(con!=null)
-      System.out.println("Data is successfully retrieved!");
-  else
-      System.out.println("no connection");
+  Connection con = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:xe","system","system");
   String sql="select minute , second from  ANSWERS";
   //String sq2="select second from  ANSWERS";
   // PreparedStatement ps = con.prepareStatement(sql);
@@ -262,6 +232,8 @@ var seconds = <%=b%>;
             } else {
                 var minute_text = '';
             }
+			  if (seconds < 10 && seconds >= 0) {seconds = "0" + seconds;} // add zero in front of numbers < 10
+			  if (seconds < 0) {seconds = "59";}
             var second_text = seconds;
             el.innerHTML =minute_text + ' ' + second_text ;
             seconds--;
@@ -276,20 +248,17 @@ var seconds = <%=b%>;
 	}
 		document.onclick=function(){
 		calltimer();};
-	
 
 </script>
 
-
-</body>
-
 <script src="https://d3js.org/d3.v3.min.js" charset="utf-8"></script>
-<script src="..\js\spin.js"></script>
+<script src="js/spin.js"></script>
  <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
-    <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
+    <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"></script>')</script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
 	<script src="../../dist/js/bootstrap.min.js"></script>
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <script src="../../assets/js/ie10-viewport-bug-workaround.js">
-   
+
+    </body>
 </html>
