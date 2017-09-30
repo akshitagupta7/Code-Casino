@@ -6,7 +6,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Log Data</title>
+<title>CODE CASINO</title>
 </head>
 <body>
 <%
@@ -34,8 +34,8 @@ if(f==1)
 	session.setAttribute("SCORE",sc);}
 	session.setAttribute("TEAM_NAME",n);
 	out.print("<span class=\"text\">WELCOME "+n+"</span>");
-	RequestDispatcher rd=request.getRequestDispatcher("spin.jsp");
-	rd.include(request,response);
+	RequestDispatcher r=request.getRequestDispatcher("spin.jsp");
+	r.include(request,response);
 	
 }
 else

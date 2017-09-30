@@ -23,7 +23,6 @@
 <div class="row">
     <div class="col-sm-12 col-md-12">
 		<ul>
-			<li><a href="spin.jsp">START GAME</a></li>
 			<li><a href="instructions.jsp">INSTRUCTIONS</li>
 			<li><a href="register.jsp">REGISTER</a></li>
 			<li><a href="login.jsp">LOGIN</a></li>

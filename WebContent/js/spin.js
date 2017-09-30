@@ -264,9 +264,9 @@ var padding = {top:20, right:40, bottom:0, left:0},
     }
 }
    
-   function mymFunction() {
-	    document.getElementById("demo").value = "Hello World";
-	}
+
+
+   
   $('#hintmodal').on('show.bs.modal', function (event) {
 	      var button = $(event.relatedTarget) 
 	      var recipient = button.data('whatever')

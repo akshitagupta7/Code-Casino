@@ -25,14 +25,16 @@ body{
 		display:table;
 		background:white;
 		position:fixed;
-		left:530px;
-		top:220px;
+		left:550px;
+		top:150px;
 		overflow:auto;
 	    color:#black;
+		font-size: 25px;
+        font-weight:900;
         font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-		width: 830px;
+		width: 800px;
 		border: 10px solid #ccc;
-		border-radius: 3px;
+		border-radius: 4px;
        animation: blink 10s step-end infinite alternate;
     }
 
@@ -80,22 +82,19 @@ body{
 		list-style: none;
 	}
 	
-	 #ans{
+	 #ans1{
+	position:fixed;
+	top:80px;
     width: 250px;
-    background: none repeat scroll 0% 0% #FFFF00;
     border: 1px solid #91B57C;
-    
     color: black;
-    border-radius: 8px;
-    box-shadow: 1px 2px 3px;
-
-	
-        font-family:Helvetica, Arial, sans-serif;
-        font-size:11px;
-        pointer-events:none;
     
 	}
-
+#sizing-addon1{
+	position:fixed;
+	left:740px;
+	top:80px;
+}
 	
 	.font{
 font-family: 'Joti One', cursive;
@@ -170,6 +169,15 @@ left:300px;
 }
 
 .modal-body{
+	color: white;
+	font-size: 40;
+	background-image:url("https://media.giphy.com/media/yBdop1UNLAjza/giphy.gif");
+	background-size:cover;
+	background-repeat:no-repeat;
+	opacity:0.9;
+}
+
+#modal-body1{
 	color: white;
 	font-size: 40;
 	background-image:url("https://media.giphy.com/media/26uf2YTgF5upXUTm0/giphy.gif");

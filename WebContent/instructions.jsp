@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 	<html>
 	<head>
+
 		<meta charset="utf-8">
-		<title>Instructions</title>
+title>CODE CASINO</title>
 
 	  <!-- Bootstrap core CSS -->
 		<link href="https://fonts.googleapis.com/css?family=Righteous" rel="stylesheet">
@@ -16,6 +17,46 @@
     <!-- Custom styles for this template -->
 	<link href="https://fonts.googleapis.com/css?family=Abril+Fatface" rel="stylesheet">
 <link href="css/instructions.css" rel="stylesheet">
+	<script>
+window.oncontextmenu = function () {
+return false;
+}
+</script>
+    <script src="https://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+    <script type="text/javascript" charset="utf-8">
+	document.onkeydown = function(){
+  switch (event.keyCode){
+        case 116 : //F5 button
+            event.returnValue = false;
+            event.keyCode = 0;
+            return false;
+        case 82 : //R button
+            if (event.ctrlKey){ 
+                event.returnValue = false;
+                event.keyCode = 0;
+                return false;
+            }
+		case 37 : //left arrow
+            if (event.altKey){ 
+                event.returnValue = false;
+                event.keyCode = 0;
+                return false;
+            }
+		case 39 : //Right arrow
+            if (event.altKey){ 
+                event.returnValue = false;
+                event.keyCode = 0;
+                return false;
+            }
+		case 85 : //U button
+            if (event.ctrlKey){ 
+                event.returnValue = false;
+                event.keyCode = 0;
+                return false;
+            }
+    }
+}
+</script>
 </head>
 <body background="imgs/instructions.jpg">
 <div class="page-header">

@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html>
 <head>
+
 <meta charset="utf-8">
-<title>Registration</title>
+title>CODE CASINO</title>
 <!-- Latest compiled and minified CSS -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
@@ -11,7 +12,46 @@
 
 
 <link rel="stylesheet" type="text/css" href="css/regstyle.css">
-
+<script>
+window.oncontextmenu = function () {
+return false;
+}
+</script>
+    <script src="https://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+    <script type="text/javascript" charset="utf-8">
+	document.onkeydown = function(){
+  switch (event.keyCode){
+        case 116 : //F5 button
+            event.returnValue = false;
+            event.keyCode = 0;
+            return false;
+        case 82 : //R button
+            if (event.ctrlKey){ 
+                event.returnValue = false;
+                event.keyCode = 0;
+                return false;
+            }
+		case 37 : //left arrow
+            if (event.altKey){ 
+                event.returnValue = false;
+                event.keyCode = 0;
+                return false;
+            }
+		case 39 : //Right arrow
+            if (event.altKey){ 
+                event.returnValue = false;
+                event.keyCode = 0;
+                return false;
+            }
+		case 85 : //U button
+            if (event.ctrlKey){ 
+                event.returnValue = false;
+                event.keyCode = 0;
+                return false;
+            }
+    }
+}
+</script>
 </head>
 
 <body background='imgs/login.jpg'>
@@ -40,14 +80,14 @@
 			    				</div>
 			    				<div class="col-xs-6 col-sm-6 col-md-6">
 			    					<div class="form-group">
-			    						<input type="text" name="member2name" id="member2name" class="form-control input-md" placeholder="Second Member's Name" autocomplete="off"  required >
+			    						<input type="text" name="member2name" id="member2name" class="form-control input-md" placeholder="Second Member's Name" autocomplete="off"  >
 			    					</div>
 			    				</div>
 			    			</div>
                             <div class="row">
 			    				<div class="col-xs-6 col-sm-6 col-md-6">
 			    					<div class="form-group">
-			    						<input type="email" name="email" id="email" class="form-control input-md" placeholder="Email Address" autocomplete="off"  required>
+			    						<input type="email" name="email" id="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" class="form-control input-md" placeholder="Email Address" autocomplete="off"  required>
 			    					</div>
 			    				</div>
 			    				<div class="col-xs-6 col-sm-6 col-md-6">
